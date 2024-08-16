@@ -1,0 +1,270 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+:root {
+
+    --font-01: 'Poppins', sans-serif;
+    --font-02: 'Philosopher', sans-serif;
+
+
+    --global-color-0: #e41345;
+    --global-color-1: #f70077;
+    --global-color-2: #1a1a1a;
+    --global-color-3: #3e4359;
+    --global-color-4: #f7f7f7;
+    --global-color-5: #fff;
+    --global-color-6: #243673;
+    --global-color-7: #bfd1ff;
+}
+
+
+.sectionFirst {
+    padding: 12rem 0% 15rem;
+}
+
+
+.sectionFirst h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-family: var(--font-02);
+} */
+
+.aboutUsDetail {
+    padding: 2.5rem 5%;
+    display: flex;
+    gap: 2rem;
+}
+
+.aboutUsDetail .img {
+    max-width: 400px;
+}
+
+.aboutUsDetail .img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.aboutUsDetail .infoAboutUs {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.aboutUsDetail .infoAboutUs h1 {
+    color: var(--global-color-1);
+    font-family: var(--font-02);
+}
+
+.aboutUsDetail .infoAboutUs .p-text {
+    font-family: var(--font-02);
+}
+
+.aboutUsDetail .infoAboutUs h2 {
+    font-family: var(--font-02);
+    color: var(--global-color-1);
+}
+
+.aboutUsDetail .infoAboutUs .iconLink {
+    display: flex;
+    gap: 2rem;
+}
+
+.aboutUsDetail .infoAboutUs .iconLink i {
+    color: var(--global-color-1);
+    overflow-y: hidden;
+}
+
+.aboutUsDetail .infoAboutUs .iconLink i a {
+    padding-left: 10px;
+    text-decoration: none;
+    color: #333;
+    font-family: var(--font-02);
+}
+
+.aboutUsDetail .infoAboutUs .iconLink i a:hover {
+    color: var(--global-color-1);
+}
+
+/* SECTION THREE */
+.aboutTeamInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 3rem 2%;
+    text-align: center;
+}
+
+.aboutTeamInfo .teamText {
+    font-family: var(--font-02);
+}
+
+.aboutTeamInfo .teamText .t-team {
+    font-family: var(--font-02);
+    font-weight: 400;
+}
+
+.aboutTeamInfo .teamText .t-heading {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: var(--font-02);
+    color: var(--global-color-1);
+}
+
+/* .teamImgInfo .box .img img{
+    width: 100%;
+} */
+
+.aboutTeamInfo .teamImgInfo {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 300px));
+    gap: 2rem;
+    margin: auto;
+    padding: 2rem;
+}
+
+.aboutTeamInfo .teamImgInfo .box {
+    overflow: hidden;
+    border-radius: 2%;
+    box-shadow: 0 0 18px 2px #d1d1d1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+}
+
+
+
+.aboutTeamInfo .teamImgInfo .box .img {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.aboutTeamInfo .teamImgInfo .box .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2%;
+}
+
+.aboutTeamInfo .teamImgInfo .box .t-name {
+    overflow-y: hidden;
+    margin-top: 2rem;
+    letter-spacing: 2px;
+    padding: .2rem 0;
+}
+
+.aboutTeamInfo .teamImgInfo .box .t-position {
+    overflow-y: hidden;
+    margin-top: .7rem;
+    padding: .2rem 0;
+}
+
+.aboutTeamInfo .teamImgInfo .box.fourthBox {
+    position: relative;
+    color: #fff;
+}
+.aboutTeamInfo .teamImgInfo .box.fourthBox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/coffee-cup.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: .7;
+}
+
+.aboutTeamInfo .teamImgInfo .box.fourthBox::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--global-color-0);
+    z-index: -1;
+    opacity: .7;
+}
+
+.sectionFirst::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color:var(--global-color-2); */
+    background-image: url("../img/nice-bottles.jpg");
+    /* background-image: url("../img/open-hand.jpg"); */
+    z-index: -1;
+    opacity: .7;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.aboutTeamInfo .teamImgInfo .box.fourthBox .ak-disc {
+    font-size: 1.6rem;
+    font-family: var(--font-02);
+    position: absolute;
+    top: 6%;
+    padding: 1rem;
+}
+
+.aboutTeamInfo .teamImgInfo .box.fourthBox .ak-sale {
+    position: absolute;
+    top: 40%;
+    padding: 1rem;
+}
+
+.aboutTeamInfo .teamImgInfo .box.fourthBox .btn {
+    position: absolute;
+    bottom: 2rem;
+    border: 1px solid #fff;
+    margin: 0 5%;
+    display: flex;
+    border-radius: 5px;
+}
+
+.aboutTeamInfo .teamImgInfo .box.fourthBox .btn a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    padding: .5rem 1.5rem;
+    transition: all .4s ease;
+}
+
+.aboutTeamInfo .teamText .t-heading {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.aboutTeamInfo .teamText .t-heading {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: var(--font-02);
+    color: var(--global-color-1);
+}
+
+.aboutTeamInfo .teamImgInfo .box.fourthBox .btn a:hover {
+    background-color: #fff;
+    color: var(--global-color-1);
+}

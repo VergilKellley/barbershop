@@ -1,0 +1,76 @@
+
+
+.sectionFirst h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-family: var(--font-02);
+}
+
+.formMap {
+    display: flex;
+    padding: 4rem 5%;
+}
+
+.formMap .map {
+    flex-basis: 55%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.formMap .form {
+    flex-basis: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 12px 1px var(--global-color-6);
+    position: relative;
+    z-index: 1;
+}
+
+.formMap .form .f-head {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: var(--font-02);
+    color: var(--global-color-0);
+}
+
+.formMap .form form {
+    display: flex;
+    flex-direction: column;
+    grid-auto-flow: 1rem;
+    gap: 1rem;
+    padding: .1rem;
+}
+
+.formMap .form form input,
+.formMap .form form select,
+.formMap .form form textarea,
+.formMap .form form button {
+    padding: .7rem 1rem .7rem .5rem;
+    /* border: none; */
+    box-sizing: 0 0 1px 1px var(--global-color-6);
+    border-radius: 5px;
+    outline: none;
+}
+
+::placeholder {
+    color: var(--global-color-3);
+}
+
+.formMap .form form select {
+    color: var(--global-color-3);
+}
+
+.formMap .form form button {
+    padding: 17px 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    width: fit-content;
+    background-color: var(--global-color-0);
+    border: 1px solid var(--global-color-0);
+    box-shadow: none;
+    color: #fff;
+    transition: .4s;
+}
