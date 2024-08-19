@@ -1,0 +1,52 @@
+'use strict'
+var testim = document.getElementById('testim'),
+testimDots = Array.prototype.slice.call(document.getElementById('testim-dots').children),
+testimContent = Array.prototype.slice.call(document.getElementById('testim-content').children),
+testimleftArrow = document.getElementById("left-arrow"),
+testimrightArrow = document.getElementById("right-arrow"),
+testimSpeed = 7500,
+currentSlide = 0,
+currentActive = 0,
+testimTimer
+;
+
+window.onload = function () {
+    // Testim Script
+    function playSlide(slide){
+        for(var k = 0; k < testimDots.length; k++) {
+            testimContent[k].classList.remove("active-content");
+            testimContent[k].classList.remove("inactive");
+            testimDots[k].classList.remove("active-dot")
+        }
+        if (slide < 0) {
+            slide = currentSlide = testimContent.length - 1;
+        }
+        if (slide > testimContent.length -1) {
+            slide = currentSlide = 0;
+        }
+        if (currentActive != currentSlide) {
+            testimContent[currentActive].classList.add("inactive");
+        }
+        testimContent[slide].classList.add("active-content");
+        testimDots[slide].classList.add("active-dot");
+
+        currentActive = currentSlide;
+
+        clearTimeout(testimTimer);
+        testimTimer = setTimeout(function (){
+            playSlide(currentSlide += 1);
+        }, testimSpeed)
+    }
+    testimleftArrow.addEventListener("click", function (){
+        playSlide(currentSlide -= 1);
+    })
+    testimrightArrow.addEventListener("click", function (){
+        playSlide(currentSlide += 1);
+    })
+    for (var l = 0; l < testimDots.length; l++ ) {
+        testimDots[l].addEventListener("click", function() {
+            playSlide(currentSlide = testimDots.indexOf(this));
+        })
+    }
+    playSlide(currentSlide);
+}
