@@ -1,0 +1,21 @@
+1. install stripe from the command line in the directory of submit-info.php:
+    
+    composer require stripe/stripe-php
+
+2. install phpmailer in backend folder where book_appointment_logic.php file is   located because that file has the code to send email.
+    
+    composer require phpmailer/phpmailer
+
+3. Social Media Management
+    
+    1. building content calendars
+    2. scheduling and publishing content
+    3. writing copy for social media aka sm posts
+    4. writing copy for news letters
+    5. influencer marketing campaigns
+    6. community managment - responding to messages and comments
+    7. creating weekly or monthly reports based on analytics
+    8. creating content, photos written etc.
+
+
+
