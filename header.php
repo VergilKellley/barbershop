@@ -19,6 +19,7 @@ require_once 'backend/display_index_page_styles_section.php';
 require_once 'backend/display_index_page_welcome_to.php';
 require_once 'backend/display_navigation.php';
 require_once 'backend/display_news_article.php';
+require_once 'backend/display_news_article_header_img.php';
 require_once 'backend/display_reviews.php';
 require_once 'backend/display_services_gallery.php';
 require_once 'backend/display_vip_services.php';
