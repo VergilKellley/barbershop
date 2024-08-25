@@ -312,7 +312,7 @@
 
     <!--------- OUR STORY STYLIST IMG ONE ----------->
 
-    <div class='update-inputs' id='services-gallery'
+    <!-- <div class='update-inputs' id='services-gallery'
         style="border:1px solid #1a1a1a;background:#d3d3d3;  border-radius: 5px; margin-top: 5vh">
         <form action="backend/update_stylist_images.php" method="post" enctype="multipart/form-data">
             <h3
@@ -357,10 +357,10 @@
             </div>
             <button class="update-btns" type="submit" name="update_stylist_images">SAVE</button>
         </form>
-    </div>
+    </div> -->
     <!--------- OUR STORY STYLIST IMG TWO ----------->
 
-    <div class='update-inputs' id='services-gallery'
+    <!-- <div class='update-inputs' id='services-gallery'
         style="border:1px solid #1a1a1a;background:#d3d3d3;  border-radius: 5px; margin-top: 5vh">
         <form action="backend/update_about_page.php" method="post" enctype="multipart/form-data">
             <h3
@@ -405,10 +405,10 @@
             </div>
             <button class="update-btns" type="submit" name="update_about_stylist_img_two">SAVE</button>
         </form>
-    </div>
+    </div> -->
     <!--------- OUR STORY STYLIST IMG THREE ----------->
 
-    <div class='update-inputs' id='services-gallery'
+    <!-- <div class='update-inputs' id='services-gallery'
         style="border:1px solid #1a1a1a;background:#d3d3d3;  border-radius: 5px; margin-top: 5vh">
         <form action="backend/update_about_page.php" method="post" enctype="multipart/form-data">
             <h3
@@ -454,7 +454,7 @@
                 <button class="update-btns" type="submit" name="update_about_stylist_img_three">SAVE</button>
         </form>
     </div>
-</div>
+</div> -->
 <!-- ABOUT PRODUCTS -->
 
 <div class='update-inputs' style="border:1px solid #1a1a1a;background:#d3d3d3;  border-radius: 5px; margin-top: 5vh">
