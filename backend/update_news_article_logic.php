@@ -7,7 +7,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_update_news_arti
     $news_article_img_alt = filter_var($_POST['news_article_img_alt'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $news_article_title = filter_var($_POST['news_article_title'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $news_article_credits = filter_var($_POST['news_article_credits'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $news_article_text = filter_var($_POST['news_article_text'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    // $news_article_text = $_POST['news_article_text'];
+    $news_article_text = htmlspecialchars($_POST["news_article_text"]
+    , ENT_QUOTES);
+    // $news_article_text = filter_var($_POST['news_article_text'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $news_article_read_more = filter_var($_POST['news_article_read_more'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $news_article_read_more_link = filter_var($_POST['news_article_read_more_link'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $fileName = $_FILES["image"]["name"];
