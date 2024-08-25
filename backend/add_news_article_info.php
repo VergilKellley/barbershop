@@ -8,7 +8,10 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
     $news_article_img_alt = $_POST["news_article_img_alt"];
     $news_article_title = $_POST["news_article_title"];
     $news_article_credits = $_POST["news_article_credits"];
-    $news_article_text = $_POST["news_article_text"];
+    $news_article_text = htmlspecialchars($_POST["news_article_text"]
+    , ENT_QUOTES);
+    // $groupname = htmlspecialchars($_POST['user'], ENT_QUOTES);
+    // $news_article_text = $_POST["news_article_text"];
     $news_article_read_more = $_POST["news_article_read_more"];
     $news_article_read_more_link = $_POST["news_article_read_more_link"];
     $fileName = $_FILES["image"]["name"];
@@ -24,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
                 // echo "Your image has been uploaded";
                 header("Location: ../edit_news_article.php");
             } else {
-                echo "Image was not uploaded";
+                echo "Image was not uploadedddd";
             }
         }else {
             echo "File is not uploaded";
