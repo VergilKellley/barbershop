@@ -113,7 +113,7 @@ require "backend/db.php";
             <form action="backend/add_new_stylist_images.php" class="stylist_form" method="POST"
                 enctype="multipart/form-data">
                 <div>
-                <a href="about.php">Back</a>
+                <a href="about">Back</a>
             </div>
             <br>
                 <div>
