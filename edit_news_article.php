@@ -115,7 +115,7 @@ require "backend/db.php";
             <form action="backend/add_news_article_info.php" class="stylist_form" method="POST"
                 enctype="multipart/form-data">
                 <div>
-                    <a href="about.php">Back</a>
+                    <a href="hair-care-news">Back</a>
                 </div>
                 <br>
                 <div>
@@ -140,7 +140,7 @@ require "backend/db.php";
                     <input type="text" name="news_article_credits" id="news_article_credits" placeholder="">
 
                     <label for="news_article_text">article text</label>
-                    <textarea id="news_article_text" name="news_article_text" value="news_article_text" rows='10'
+                    <textarea id="news_article_text" name="news_article_text" rows='20'
                         cols='50' style='resize:none; padding:10px'></textarea>
 
                     <label for="news_article_read_more">read more</label>
@@ -199,7 +199,7 @@ require "backend/db.php";
                     </td>
                     <br>
                     <td><textarea id="article_text" name="news_article_text" rows='5' cols='50'
-                            style='resize:none; padding:10px'><?= $news_article['news_article_text']; ?></textarea>
+                            style='resize:none; padding:10px' readonly><?= $news_article['news_article_text']; ?></textarea>
                         <br>
                     <td><span style='font-weight:bold'>read more: <?= $news_article['news_article_read_more']; ?></span>
                     </td>
