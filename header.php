@@ -94,47 +94,47 @@ require_once 'backend/display_welcome_to_images.php';
             <nav style='background: <?= $primary_color; ?>'>
                 <ul>
                     <li>
-                        <a href="index.php">Home</a>
+                        <a href="home">Home</a>
                     </li>
                     <li>
-                        <a href="book_appointment_4.php">Book Now</a>
+                        <a href="book_appointment_4">Book Now</a>
                     </li>
                     <li>
-                        <a href="about.php">About</a>
+                        <a href="about">About</a>
                     </li>
                     <li>
-                        <a href="news.php">News</a>
+                        <a href="hair-care-news">News</a>
                     </li>
                     <li>
-                        <a href="gallery.php">Photo Gallery</a>
+                        <a href="gallery">Photo Gallery</a>
                     </li>
                     <li>
-                        <a href="contact.php">Contact</a>
+                        <a href="contact">Contact</a>
                     </li>
                     <?php if (isset($user)): ?>
                     <li>
                         <a style="color:<?= $accent_color; ?>">Hello <?= htmlspecialchars($user["name"]) ?></a>
                     </li>
                     <li>
-                        <a href="stylist_info.php">Edit Technicians</a>
+                        <a href="stylist_info">Edit Technicians</a>
                     </li>
                     <li>
-                        <a href="appointments-view-edit.php">Edit Appointments</a>
+                        <a href="appointments-view-edit">Edit Appointments</a>
                     </li>
                     <li>
-                        <a href="edit_news_article.php">Edit News</a>
+                        <a href="edit_news_article">Edit News</a>
                     </li>
                     <li>
-                        <a href="services_chosen_edit.php">Edit Services</a>
+                        <a href="services_chosen_edit">Edit Services</a>
                     </li>
                     <li>
-                        <a href="edit_gallery.php">Edit Photo Gallery</a>
+                        <a href="edit_gallery">Edit Photo Gallery</a>
                     </li>
                     <li>
-                        <a href="edit_stylist_images.php">Edit Stylist Photos</a>
+                        <a href="edit_stylist_images">Edit Stylist Photos</a>
                     </li>
                     <li>
-                        <a href="logout.php">log out</a>
+                        <a href="logout">log out</a>
                     </li>
                     <?php endif; ?>
                 </ul>
