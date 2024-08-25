@@ -48,7 +48,7 @@ require "backend/db.php";
 
 <body style='display:flex; justify-content:center; align-items:center'>
     <div style="margin: 0 auto; overflow-x:auto;">
-        <a href="index.php"><--Back</a>
+        <a href="home">Back</a>
         <br>
         <br>
         <button type="submit" style="padding:5px 8px; width: 200px">Show more appointments</button>
