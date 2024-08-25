@@ -55,7 +55,7 @@ require 'backend/display_website_colors.php';
     <br>
     <div class='container' id='desk-top-calendar' styles='margin-top:50px'>
         <div class='left'>
-            <a style="color:#333; display:inline-block; margin-bottom: 10px" href="index.php">Previous Page</a>
+            <a style="color:#333; display:inline-block; margin-bottom: 10px" href="home">Previous Page</a>
             <br>
             <p id='select-a-date-mobile' class='medium-font'><span style='color:<?= $accent_color; ?>'>1.</span> Select Date</p>
             <div style='border: 2px solid <?= $accent_color; ?>' class='calendar'>
