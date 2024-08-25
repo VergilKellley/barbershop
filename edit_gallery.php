@@ -90,7 +90,7 @@ require "backend/db.php";
 <body>
     <section id='gallery-edits' class="stylist_info_container;"
         style="height: 100vh; display:grid; place-items:center;">
-        <h3 style='padding-top: 40px'><a href="index.php">
+        <h3 style='padding-top: 40px'><a href="home">
                 Back</a>
         </h3>
         <div class='form-container' style="display:flex; flex-wrap:wrap; gap:2rem; padding: 20px">
