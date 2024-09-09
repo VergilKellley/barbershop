@@ -82,7 +82,7 @@ require "backend/db.php";
 
 <body>
     <section class="stylist_info_container" style="height: 100vh; display:grid; place-items:center;">
-        <h3 style='padding-top: 40px'><a href="index.php">
+        <h3 style='padding-top: 40px'><a href="home">
                 Back</a>
         </h3>
         <div id='form-container' style="display: flex; gap:4rem; padding: 20px">
