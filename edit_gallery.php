@@ -78,10 +78,16 @@ require "backend/db.php";
         border: 1px solid red;
         cursor: pointer;
     }
+    #edit-gallery-photo {
+        width: 200px;
+    }
 
     @media (max-width:550px) {
         .form-container {
             flex-direction: column;
+        }
+        #edit-gallery-photo {
+            width: 100% !important;
         }
     }
     </style>
@@ -207,7 +213,7 @@ require "backend/db.php";
                     $category_info = mysqli_query($conn, $category_info_query);
                     ?>
                         <?php while ($category = mysqli_fetch_assoc($category_info)) : ?>
-                        <div class='nth-child-bkgd-color' style='border:1px solid #333; padding:10px; line-height: 1.5'>
+                        <div class='nth-child-bkgd-color' style='border:1px solid #333; padding:10px; line-height: 1.5; width:100%'>
                             <input type="hidden" name="category_id" value="<?= $category['category_id'] ?>">
 
                             <!-- GET GALLERY CATEGORY USING CATEGORY ID -->
@@ -245,7 +251,7 @@ require "backend/db.php";
                             <br>
                             <td><span
                                     style="display:flex; flex-direction:column; align-items:center; font-weight:bold">image:
-                                    <img style='width:200px' src="uploads/<?= $category['gallery_img'] ?>"
+                                    <img id="edit-gallery-photo"; src="uploads/<?= $category['gallery_img'] ?>"
                                         alt="<?= $category['gallery_img_alt'] ?>"></span></td>
                             <?php
                         echo "<br><br>
