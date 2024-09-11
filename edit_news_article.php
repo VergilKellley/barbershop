@@ -27,7 +27,7 @@ require "backend/db.php";
     }
 
     textarea {
-        padding: 20px;
+        padding: 10px;
     }
 
     a {
@@ -171,7 +171,7 @@ require "backend/db.php";
                     $news_article_result = mysqli_query($conn, $news_article_query);
                     ?>
                 <?php while ($news_article = mysqli_fetch_assoc($news_article_result)) : ?>
-                <div class='nth-child-bkgd-color' style='border:1px solid #333; padding:10px; line-height: 1.5'>
+                <div class='nth-child-bkgd-color' style='border:1px solid #333; padding:10px; line-height: 1.5; max-width:100%'>
                     <input type="hidden" name="id" value="<?= $news_article['id'] ?>">
                     <?php
                             GLOBAL $article_id;
@@ -179,36 +179,48 @@ require "backend/db.php";
                             ?>
 
                     <br>
-                    <td>
+
+
+                
+                    <td style="max-width:100vw">
                         <span style="display:flex; flex-direction:column; align-items:center; font-weight:bold">image:
-                            <img style='width:200px' src='uploads/<?= $news_article['news_article_img'] ?>'
+                            <img style='width:100%' src='uploads/<?= $news_article['news_article_img'] ?>'
                                 alt="<?= $news_article['news_article_img_alt'] ?>">
                         </span>
                     </td>
                     <br>
-                    <td><span style='font-weight:bold'>image description:
+                    <td style="max-width:100vw"><span style='font-weight:bold'>image description:
                             <?= $news_article['news_article_img_alt']; ?></span>
                     </td>
                     <br>
 
-                    <td><span style='font-weight:bold'>title: <?= $news_article['news_article_title']; ?></span>
+                    <td style="max-width:100vw">
+                        <span style='font-weight:bold'>title: <?= $news_article['news_article_title']; ?></span>
                     </td>
                     <br>
 
-                    <td><span style='font-weight:bold'>credits: <?= $news_article['news_article_credits']; ?></span>
+                    <td style="max-width:100vw">
+                        <span style='font-weight:bold'>credits: <?= $news_article['news_article_credits']; ?></span>
                     </td>
                     <br>
-                    <td><textarea id="article_text" name="news_article_text" rows='5' cols='50'
+                    <td style="max-width:80vw">
+                        <textarea style="max-width:100%" id="article_text" name="news_article_text" rows='5' cols='50'
                             style='resize:none; padding:10px' readonly><?= $news_article['news_article_text']; ?></textarea>
                         <br>
-                    <td><span style='font-weight:bold'>read more: <?= $news_article['news_article_read_more']; ?></span>
+                    </td>
+                    <td style="max-width:100vw">
+                        <span style='font-weight:bold'>read more: <?= $news_article['news_article_read_more']; ?></span>
                     </td>
 
                     <br>
 
-                    <td><span style='font-weight:bold'>link to full article: <?= $news_article['news_article_read_more_link']; ?></span>
+                    <td style="max-width:100vw">
+                        <span style='font-weight:bold; width:100%; '>
+                            <p style="max-width:100%">link to full article:</p>
+                            <p style="width:100%; word-wrap:break-word"><?= $news_article['news_article_read_more_link']; ?></p>
+                        </span>
                     </td>
-                    </td>
+                    
                     <?php
                     
                         echo "<br><br>
@@ -222,6 +234,7 @@ require "backend/db.php";
                         </div>";                       
                         ?>
                     <?php endwhile ?>
+                
                 </div>
             </div>
         </div>
