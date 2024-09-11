@@ -90,4 +90,4 @@ require_once 'backend/display_welcome_to_images.php';
       </div>
     </footer>
   </body>
-</php>
+</html>
