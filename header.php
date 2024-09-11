@@ -11,7 +11,6 @@ require_once 'backend/display_business_hours_fri.php';
 require_once 'backend/display_business_hours_sat.php';
 require_once 'backend/display_business_hours_sun.php';
 require_once 'backend/display_contact_info.php';
-// require_once 'bacend/display_gallery_images_and_categories.php';
 require_once 'backend/display_gallery_page.php';
 require_once 'backend/display_header_image.php';
 require_once 'backend/display_index_images.php';
@@ -66,23 +65,26 @@ require_once 'backend/display_welcome_to_images.php';
 
         <!-- fontawesome  -->
         <script src="https://kit.fontawesome.com/7a6c6b42a6.js" crossorigin="anonymous"></script>
-        <script src='js/script.js' defer></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <!-- favicon cross-browser -->
-        <link rel="shortcut icon" href="/uploads/logo.png">
-        <link rel="shortcut icon" href="img/pic1.jpg">
 
-        <!-- favicon IOS devices -->
-        <!-- <link rel="apple-touch-icon" href="./uploads/logo.png"> -->
-        <link rel="apple-touch-icon" href="/uploads/logo.png">
-        <title><?= $business_name; ?></title>
+        <script src='js/script.js' defer></script>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- favicon cross-browser -->
+  <link rel="shortcut icon" href="uploads/color-running-logo.png">
+
+  <!-- favicon IOS devices -->
+  <link rel="apple-touch-icon" href="uploads/color-running-logo.png">
+        <title></title>
+        <!-- <title><?= $business_name; ?></title> -->
         
 
 
     <body>
         <header style='background: <?= $primary_color; ?>'>
-            <a href="index.php"><img style='height:80px;border-radius:5px' src="uploads/<?= $logo; ?>"
+            <a href="index.php"><img style='border-radius:5px; height:100%' src="uploads/<?= $logo; ?>"
                     alt="<?= $logo_image_alt; ?>"></a>
             <!-- <a class="logo" href="#">Nail Salon</a> -->
 
@@ -93,10 +95,39 @@ require_once 'backend/display_welcome_to_images.php';
             <div class="menuToggle"></div>
             <nav style='background: <?= $primary_color; ?>'>
                 <ul>
+                    <?php if (!isset($user)): ?>
                     <li>
-                        <a href="home">Home</a>
+                        <a href="home" rel="noopener noreferrer">Home</a>
                     </li>
                     <li>
+                        <a href="book_appointment_4" rel="noopener noreferrer">Book Now</a>
+                    </li>
+                    <li>
+                        <a href="about" rel="noopener noreferrer">About</a>
+                    </li>
+                    <li>
+                        <a href="hair-care-news" rel="noopener noreferrer">News</a>
+                    </li>
+                    <li>
+                        <a href="gallery" rel="noopener noreferrer">Photo Gallery</a>
+                    </li>
+                    <li>
+                        <a href="contact" rel="noopener noreferrer">Contact</a>
+                    </li>
+                    <li>
+                        <a href="webQwick-login" rel="noopener noreferrer">Login</a>
+                    </li>
+                    <!-- <li>
+                        <a href="webQwick-signup">Signup</a>
+                    </li> -->
+                    <?php elseif (isset($user)): ?>
+                    <li>
+                        <a style="color:<?= $accent_color; ?>" rel="noopener noreferrer">Hello <?= htmlspecialchars($user["name"]) ?></a>
+                    </li>
+                    <li>
+                        <a href="home" rel="noopener noreferrer">Home</a>
+                    </li>
+                    <!-- <li>
                         <a href="book_appointment_4">Book Now</a>
                     </li>
                     <li>
@@ -110,31 +141,30 @@ require_once 'backend/display_welcome_to_images.php';
                     </li>
                     <li>
                         <a href="contact">Contact</a>
-                    </li>
-                    <?php if (isset($user)): ?>
+                    </li> -->
                     <li>
-                        <a style="color:<?= $accent_color; ?>">Hello <?= htmlspecialchars($user["name"]) ?></a>
-                    </li>
-                    <li>
-                        <a href="stylist_info">Edit Technicians</a>
+                        <a href="stylist_info" rel="noopener noreferrer">Edit Technicians</a>
                     </li>
                     <li>
-                        <a href="appointments-view-edit">Edit Appointments</a>
+                        <a href="appointments-view-edit" rel="noopener noreferrer">View Edit Appointments</a>
                     </li>
                     <li>
-                        <a href="edit_news_article">Edit News</a>
+                        <a href="contact_form_view_messages" rel="noopener noreferrer">View Edit Messages</a>
                     </li>
                     <li>
-                        <a href="services_chosen_edit">Edit Services</a>
+                        <a href="edit_news_article" rel="noopener noreferrer">Edit News</a>
                     </li>
                     <li>
-                        <a href="edit_gallery">Edit Photo Gallery</a>
+                        <a href="services_chosen_edit" rel="noopener noreferrer">Edit Services</a>
                     </li>
                     <li>
-                        <a href="edit_stylist_images">Edit Stylist Photos</a>
+                        <a href="edit_gallery" rel="noopener noreferrer">Edit Photo Gallery</a>
                     </li>
                     <li>
-                        <a href="logout">log out</a>
+                        <a href="edit_stylist_images" rel="noopener noreferrer">Edit Stylist Photos</a>
+                    </li>
+                    <li>
+                        <a href="logout" rel="noopener noreferrer">log out</a>
                     </li>
                     <?php endif; ?>
                 </ul>
