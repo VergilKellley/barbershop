@@ -17,7 +17,7 @@
 <!-- SECOND SECTION -->
 <section class="aboutUsDetail">
     <span class="img">
-        <img src="uploads/<?= $about_owner_manager_img; ?>" alt="<?= $about_owner_manager_img_description; ?>" />
+        <img src="uploads/<?= $about_owner_mngr_img; ?>" alt="<?= $about_owner_mngr_img_alt; ?>" />
     </span>
 
     <div id='since' class="infoAboutUs">
@@ -26,14 +26,14 @@
         <p class='p-font-size'><?= $about_paragraph_one; ?></p>
         <!-- <p class="para"><?= $about_paragraph_one; ?></p> -->
         <p class='p-font-size'><?= $about_paragraph_two; ?></p>
-        <h2><?= $about_owner_manager_name; ?> <p class='p-font-size' >
-                <?= $about_owner_manager_title; ?></p></h2>
+        <h2><?= $about_owner_mngr_name; ?> <p class='p-font-size' >
+                <?= $about_owner_mngr_title; ?></p></h2>
         <div class="iconLink">
             <i class="fa-solid fa-phone">
-                <a href="tel:+<?= $about_owner_manager_phone; ?>"><?= $about_owner_manager_phone; ?></a>
+                <a href="tel:+<?= $about_owner_mngr_phone; ?>" rel="noopener noreferrer"><?= $about_owner_mngr_phone; ?></a>
             </i>
             <i class="fa-solid fa-envelope">
-                <a href="#"><?= $about_owner_manager_email; ?></a>
+                <a href="#" rel="noopener noreferrer"><?= $about_owner_mngr_email; ?></a>
             </i>
         </div>
     </div>
@@ -66,11 +66,11 @@
 
                     <div style='margin-bottom:20px'>
                         <div>
-                            <label for="about_header_img_description">description</label>
+                            <label for="about_header_img_"></label>
                         </div>
                         <input style="padding:8px 10px; border-radius:5px" type="text"
-                            id="about_header_img_description" name="about_header_img_description"
-                            value="<?= $about_header_img_description; ?>">
+                            id="about_header_img_" name="about_header_img_"
+                            value="<?= $about_header_img_; ?>">
                     </div>
                 </div>
             </div>
@@ -114,7 +114,7 @@
         </form>
     </div>
 
-    <!-- OWNER/MANAGER NAME TITLE PHONE EMAIL -->
+    <!-- OWNER/mngr NAME TITLE PHONE EMAIL -->
     <div class='update-inputs' style="border:1px solid #1a1a1a;background:#d3d3d3;  border-radius: 5px; margin-top: 5vh">
         <form action="backend/update_about_page.php" method="post">
             <h3
@@ -125,43 +125,43 @@
 
                 <div style="padding: 10px">
                     <div>
-                        <label for="about_owner_manager_name">owner/manager name</label>
+                        <label for="about_owner_mngr_name">owner/mngr name</label>
                     </div>
                     <div style='display:flex; flex-direction:column'>
-                        <input style='padding:10px' id="about_owner_manager_name" type="text"
-                            name='about_owner_manager_name' value='<?= $about_owner_manager_name; ?>'>
+                        <input style='padding:10px' id="about_owner_mngr_name" type="text"
+                            name='about_owner_mngr_name' value='<?= $about_owner_mngr_name; ?>'>
                     </div>
                     <br>
                     <div>
-                        <label for="about_owner_manager_title">owner/manager title </label>
+                        <label for="about_owner_mngr_title">owner/mngr title </label>
                     </div>
                     <div style='display:flex; flex-direction:column'>
-                        <input style='padding:10px' id="about_owner_manager_title" type="text"
-                            name='about_owner_manager_title' value='<?= $about_owner_manager_title; ?>'>
+                        <input style='padding:10px' id="about_owner_mngr_title" type="text"
+                            name='about_owner_mngr_title' value='<?= $about_owner_mngr_title; ?>'>
                     </div>
                     <br>
                     <div>
-                        <label for="about_owner_manager_phone">owner/manager phone </label>
+                        <label for="about_owner_mngr_phone">owner/mngr phone </label>
                     </div>
                     <div style='display:flex; flex-direction:column'>
-                        <input style='padding:10px' id="about_owner_manager_phone" type="text"
-                            name='about_owner_manager_phone' value='<?= $about_owner_manager_phone; ?>'>
+                        <input style='padding:10px' id="about_owner_mngr_phone" type="text"
+                            name='about_owner_mngr_phone' value='<?= $about_owner_mngr_phone; ?>'>
                     </div>
                     <br>
                     <div>
-                        <label for="about_owner_manager_name">owner/manager email</label>
+                        <label for="about_owner_mngr_name">owner/mngr email</label>
                     </div>
                     <div style='display:flex; flex-direction:column'>
-                        <input style='padding:10px' id="about_owner_manager_email" type="email"
-                            name='about_owner_manager_email' value='<?= $about_owner_manager_email; ?>'>
+                        <input style='padding:10px' id="about_owner_mngr_email" type="email"
+                            name='about_owner_mngr_email' value='<?= $about_owner_mngr_email; ?>'>
                     </div>
                 </div>
             </div>
-            <button class="update-btns" type="submit" name="update_about_owner_manager_name_email">SAVE</button>
+            <button class="update-btns" type="submit" name="update_about_owner_mngr_name_email">SAVE</button>
         </form>
     </div>
 
-    <!--------- OUR STORY OWNER/MANAGER IMG ----------->
+    <!--------- OUR STORY OWNER/mngr IMG ----------->
 
     <div class='update-inputs' id='services-gallery'
         style="border:1px solid #1a1a1a;background:#d3d3d3;  border-radius: 5px; margin-top: 5vh">
@@ -175,24 +175,24 @@
                 <div style="padding: 10px">
                     <div style='margin-bottom:20px'>
                         <div>
-                            <label for="about_owner_manager_img">owner/manager image</label>
+                            <label for="about_owner_mngr_img">owner/mngr image</label>
                         </div>
                         <input type="hidden" name="MAX_FILE_SIZE" value="1048576">
-                        <input style="padding:8px 10px; border-radius:5px" type="file" id="about_owner_manager_img"
-                            name="image" value="<?= $about_owner_manager_img; ?>">
+                        <input style="padding:8px 10px; border-radius:5px" type="file" id="about_owner_mngr_img"
+                            name="image" value="<?= $about_owner_mngr_img; ?>">
                     </div>
 
                     <div style='margin-bottom:20px'>
                         <div>
-                            <label for="about_owner_manager_img_description">description</label>
+                            <label for="about_owner_mngr_img_"></label>
                         </div>
                         <input style="padding:8px 10px; border-radius:5px" type="text"
-                            id="about_owner_manager_img_description" name="about_owner_manager_img_description"
-                            value="<?= $about_owner_manager_img_description; ?>">
+                            id="about_owner_mngr_img_" name="about_owner_mngr_img_"
+                            value="<?= $about_owner_mngr_img_; ?>">
                     </div>
                 </div>
             </div>
-            <button class="update-btns" type="submit" name="update_about_owner_manager_img">SAVE</button>
+            <button class="update-btns" type="submit" name="update_about_owner_mngr_img">SAVE</button>
         </form>
     </div>
 </div>
@@ -228,14 +228,14 @@
         <?php endwhile; ?>
         <!-- <div class="box">
             <div class="img">
-                <img src="uploads/<?= $about_stylist_img_two; ?>" alt="<?= $about_stylist_img_two_description; ?>">
+                <img src="uploads/<?= $about_stylist_img_two; ?>" alt="<?= $about_stylist_img_two_; ?>">
             </div>
             <div class="t-name"><?= $about_stylist_img_two_name; ?></div>
             <div class="t-position"><?= $about_stylist_img_two_title; ?></div>
         </div>
         <div class="box">
             <div class="img">
-                <img src="uploads/<?= $about_stylist_img_three; ?>" alt="<?= $about_stylist_img_three_description; ?>">
+                <img src="uploads/<?= $about_stylist_img_three; ?>" alt="<?= $about_stylist_img_three_; ?>">
             </div>
             <div class="t-name"><?= $about_stylist_img_three_name; ?></div>
             <div class="t-position"><?= $about_stylist_img_three_title; ?></div>
@@ -249,7 +249,7 @@
             <!--<a href="book_appointment_4.php" style ='font-size: 18px; color:#fff; border: 1px solid #fff; padding: 10px 8px; text-decoration: none'>Book Appointment</a>-->
 
             <div class="btn" style='text-align:center; margin-bottom: 50px'>
-                <a href="https://reports.appheaven.us/online/go2.php?merchantid=9FRQ6BGWVKGS1">Book Now</a>
+                <a href="https://reports.appheaven.us/online/go2.php?merchantid=9FRQ6BGWVKGS1" rel="noopener noreferrer">Book Now</a>
             </div>
             <!--<div class="ak-disc" style='text-align:center'>-->
             <!--    Book Your Appointment Now And Get 25% Off-->
@@ -333,7 +333,7 @@
 
                     <div style='margin-bottom:20px'>
                         <div>
-                            <label for="stylist_img_alt">image description</label>
+                            <label for="stylist_img_alt">image </label>
                         </div>
                         <input style="padding:8px 10px; border-radius:5px" type="text"
                             id="stylist_img_alt" name="stylist_img_alt"
@@ -381,11 +381,11 @@
 
                     <div style='margin-bottom:20px'>
                         <div>
-                            <label for="about_stylist_img_two_description">image description</label>
+                            <label for="about_stylist_img_two_">image </label>
                         </div>
                         <input style="padding:8px 10px; border-radius:5px" type="text"
-                            id="about_stylist_img_two_description" name="about_stylist_img_two_description"
-                            value="<?= $about_stylist_img_two_description; ?>">
+                            id="about_stylist_img_two_" name="about_stylist_img_two_"
+                            value="<?= $about_stylist_img_two_; ?>">
                         <br>
                         <br>
                         <div>
@@ -427,11 +427,11 @@
                             name="image" value="<?= $about_stylist_img_three; ?>">
                     </div>
                     <div>
-                        <label for="about_stylist_img_three_description">image description</label>
+                        <label for="about_stylist_img_three_">image </label>
                     </div>
                     <input style="padding:8px 10px; border-radius:5px" type="text"
-                        id="about_stylist_img_three_description" name="about_stylist_img_three_description"
-                        value="<?= $about_stylist_img_three_description; ?>">
+                        id="about_stylist_img_three_" name="about_stylist_img_three_"
+                        value="<?= $about_stylist_img_three_; ?>">
                     <div>
                         <br>
                         <div>
