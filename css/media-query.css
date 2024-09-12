@@ -204,14 +204,9 @@
     } */
      /******** NEWS ************/
      .news-article-container {
-        padding: 0 20px;
+        padding: 0;
      }
-}
-
-@media (max-width: 610px) {
-    /**  index page **/
-
-    .news-article-container {
+     .news-article-container {
         flex-direction: column-reverse;
         margin-bottom:20vh;
     }
@@ -220,6 +215,14 @@
         margin-right: 0 !important;
         padding:20px !important;
     }
+    #article {
+        padding: 0;
+    }
+}
+
+@media (max-width: 610px) {
+    /**  index page **/
+
     .article div {
         width:100% !important;
     }
