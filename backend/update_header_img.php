@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
             $query = "INSERT INTO header_image (header_img, header_img_description) VALUES ('$fileName', '$header_img_description')";
             if(mysqli_query($conn, $query)){
                 // echo "Your image has been uploaded";
-                header("Location: ../index.php#header-image");
+                header("Location: ../home#header-image");
             } else {
                 echo "Image was not uploaded";
             }
