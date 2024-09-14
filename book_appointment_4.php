@@ -40,6 +40,7 @@ require 'backend/display_website_colors.php';
     <script src='js/closeModals.js' defer></script>
 
     <link rel='stylesheet' href='css/book_appointment.css' />
+
     <script src="js/closeModals.js" defer></script>
     <title>Your Barbershop</title>
 
@@ -113,7 +114,7 @@ require 'backend/display_website_colors.php';
                     $service_chosen_info = mysqli_query($conn, $service_chosen_query);
                 ?>
                 <div
-                    style='border-radius: 5px; background-color: <?= $accent_color; ?>; color: #fff; height: 150px; padding: 10px; overflow-y:scroll; border: 2px solid #fff'>
+                    style='border-radius: 5px; background-color: <?= $accent_color; ?>; color: #fff; height: 250px; padding: 10px; overflow-y:scroll; border: 2px solid #fff'>
                     <?php while ($service_chosen = mysqli_fetch_assoc($service_chosen_info)) : ?>
                     <div style='margin-bottom: 20px'>
 
